@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+
+.icon-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+.line {
+    border-radius: 8px;
+    width: 80px;
+    height: 10px;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 3s;
+
+}
+
+
+.line::before,
+.line::after {
+    border-radius: 8px;
+    display: block;
+    content: '';
+    width: 80px;
+    height: 10px;
+    background-color: white;
+    transform: translateY(-1rem) rotate(0);
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 3s;
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: .3s;
+
+}
+
+.line::after {
+    transform: translateY(1rem);
+}
+
+.line-arrow-left {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+
+}
+
+.line-arrow-left::before {
+    transform: translateY(2px) rotate(-35deg);
+}
+
+.line-arrow-left::after {
+    transform: translateY(-2px) rotate(35deg);
+}
